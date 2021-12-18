@@ -21,6 +21,7 @@ int eliminate(Matrix *matrix, Matrix *b){
 			{
 				A[w][i] -= wsp*A[0][i];
 			}
+			b->data[w][0] -= wsp*b->data[0][0];
 		}
 	}
 
