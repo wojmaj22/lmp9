@@ -6,3 +6,6 @@ test: all
 
 test2: all
 	bin/gauss dane/C dane/d
+debug: 
+	cc src/*.c -o bin/gauss_debug -ggdb
+	gdb bin/gauss_debug dane/C dane/d
