@@ -7,8 +7,6 @@
  */
 int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 
-	printToScreen(mat);
-
 	if(mat->r != b->r)
 		return 2;
 
@@ -25,7 +23,6 @@ int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 		{
 			suma += mat->data[w][k]*x->data[k][0];
 		}
-		printf("Suma to: %lf\n", suma);
 		x->data[w][0] = (b->data[w][0] - suma) / mat->data[w][w];
 	}
 
