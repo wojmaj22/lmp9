@@ -22,10 +22,11 @@ void test1(Matrix *A, Matrix *b, Matrix *x, char *plik)
 void test2(Matrix *A, Matrix *b, Matrix *x)
 {
 	int res;
-	eliminate(A,b);
-	res = backsubst(x, A, b);
+	res = eliminate(A,b);
+	x = createMatrix(b->r, 1);
 	if(res = 2)
-		printf("Złe wymiary macierzy - macierz niekwadratowa o wymiarach %ix%i\n", A->r, A->c);
+		printf("Złe wymiary macierzy - macierz niekwadratowa \n");
+	res = backsubst(x,A,b);
 }
 void test3( Matrix *A, Matrix *b, Matrix *x)
 {
@@ -74,7 +75,7 @@ int main(int argc, char **argv)
 			}
 		}
 	}
-	printf("Dane wczytano poprawnie, test działania programu\n");
+	printf("Dane wczytano poprawnie - macierz %ix%i, test działania programu\n", A->r, A->c);
 
 	switch( wybor )
 	{
