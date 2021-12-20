@@ -7,6 +7,8 @@
  */
 int  backsubst(Matrix *x, Matrix *mat, Matrix *b) {
 
+	if(mat->r != mat->c)
+		return 2;
 	if(mat->r != b->r)
 		return 2;
 

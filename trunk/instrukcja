@@ -1,0 +1,9 @@
+Korzystanie z programu za pomocą Makefile:
+all    - kompilacja programu
+oblicz - program oblicza i wypisuje rozwiązania na podstawie plików dane/A oraz dane/b
+debug  - służy do debugowania programu 
+tester - kompilacja testera funkcji
+test1  - testuje poprawność programu - rozwiązuje układ na podstawie plików dane/dane_testowe/test1 oraz dane/dane_testowe/test1_w oraz weryfikuje wyniki na podstawie pliku dane/dane_testowe/wyniki_1
+test2  - sprawdza reakcję programu na macierz niekwadratową
+test3  - sprawdza reakcję programu na macierz osobliwą - wypełnioną jedynkami
+test4  - sprawdza reakcję programu na macierz zawierającą zero na diagonalii 
