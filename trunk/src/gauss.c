@@ -5,9 +5,13 @@
 /**
  * Zwraca 0 - elimnacja zakonczona sukcesem
  * Zwraca 1 - macierz osobliwa - dzielenie przez 0
+ * Zwraca 2 - macierz o złych wymiarach
  */
 
 int eliminate(Matrix *mat, Matrix *b){
+
+	if(mat->r != mat->c)
+		return 2;
 
         int i, j, k, l, m, rzad = -1;
         double x = 0, tmp1 = 0, tmp2 = 0;
