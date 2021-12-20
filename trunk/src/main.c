@@ -12,11 +12,15 @@ int main(int argc, char ** argv) {
 	Matrix * x;
 
 	if (A == NULL) // sprawdzanie czy dobrze wczytało macierze
+	{
 		fprintf(stderr, "Błąd wczytywania macierzy A\n");
 		return -1;
-	if (b == NULL) 
+	}
+	if (b == NULL)
+	{	
 		fprintf(stderr, "Błąd wczytywania maczierzy B\n");
 		return -2;
+	}
 	printToScreen(A);
 	printToScreen(b);
 
